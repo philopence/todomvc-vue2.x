@@ -5,6 +5,10 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+Vue.directive('todo-focus', function (el, binding) {
+  binding.value && el.focus()
+})
+
 new Vue({
   router,
   store,
